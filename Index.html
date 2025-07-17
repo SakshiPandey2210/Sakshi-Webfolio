@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,21 +9,10 @@
   <!-- Bootstrap + FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
- <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Disable source view script -->
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-    });
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    document.addEventListener("keydown", function (e) {
-      if (e.ctrlKey && e.key.toLowerCase() === 'u') e.preventDefault();
-      if (e.key === "F12") e.preventDefault();
-      if (e.ctrlKey && e.shiftKey && (e.key.toLowerCase() === 'i' || e.key.toLowerCase() === 'j')) e.preventDefault();
-    });
-  </script>
 </head>
 
 
@@ -34,461 +23,478 @@
   <!-- Page Wrapper Start -->
   <div class="page-wrapper mt-4">
 
-<!-- Responsive Navbar Wrapper -->
-<div class="navbar-wrapper">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand navbar-brand-lobster" href="#">Sakshi Pandey</a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    <!-- Responsive Navbar Wrapper -->
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand navbar-brand-lobster" href="#">Sakshi Pandey</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tabs">Profile</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-
-
- <section id="about" class="pt-0">
-
-  <div class=" themed-box p-4">
-    <div class="row align-items-center g-4">
-      <!-- Profile Image -->
-     <div class="col-md-5 text-center">
-    <div class="profile-pic-wrapper">
-      <img src="assets/images/SakshiImage.jpeg" class="profile-pic img-fluid" alt="Profile Picture" />
-    </div>
-  </div>
-
-
-      <!-- About Text -->
-      <div class="col-md-7">
-       <h3>Hello, I'm <strong class="textcolor">Sakshi Pandey</strong></h3> 
-       <!-- <h1 id="typewriter" class="fw-bold"></h1> -->
-      <h5 class="lead fw-bold" id="typewriter"></h3> 
-
-        <!-- 🔗 Social Icons -->
-        <div class="social-icons mb-3">
-          <a href="https://in.linkedin.com/in/sakshi-pandey-319955233" target="_blank" class="me-3 text-decoration-none">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-        <a href="https://www.instagram.com/sakshipandey_22_?utm_source=qr&igsh=c2Nrd2thcjNkNHpt" target="_blank" class="me-3 text-decoration-none">
-  <i class="fab fa-instagram fa-lg"></i>
-</a>
-          <a href="https://twitter.com/your-profile" target="_blank" class="me-3 text-decoration-none">
-            <i class="fab fa-twitter fa-lg"></i>
-          </a>
-          <a href="mailto:sakshipandey8795@gmail.com" class="text-decoration-none">
-            <i class="fas fa-envelope fa-lg"></i>
-          </a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tabs">Profile</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-
-      <!-- Download Button -->
-          <a href="assets/Sakshi Pandey_resume.pdf" download class="btn btn-info mt-2">
-            <i class="fas fa-download"></i> Download CV
-          </a>
-
-      </div>
+      </nav>
     </div>
 
-</div>
-</section>
+  <!--This is about section-->
+    <section id="about" class="pt-0" >
 
-
-<!-- Tabs Section -->
-<section id="tabs">
- 
-  <div class="card shadow p-4">
-    <div class="row g-4 align-items-start">
-
-      <!-- 🔷 Left: TABS in their own card -->
-      <div class="col-md-6">
-        <div class="card h-100 p-3 ">
-          <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active tabnavlink" id="experience-tab" data-bs-toggle="tab"
-                data-bs-target="#experience" type="button" role="tab">Experience</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link tabnavlink" id="skills-tab" data-bs-toggle="tab"
-                data-bs-target="#skills" type="button" role="tab">Skills</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link tabnavlink" id="education-tab" data-bs-toggle="tab"
-                data-bs-target="#education" type="button" role="tab">Education</button>
-            </li>
-          </ul>
-
-          <div class="tab-content">
-         
-      <!-- Experience -->
-      <div class="tab-pane fade show active" id="experience" role="tabpanel">
-        <!-- <h5 class="fw-bold mb-4">Experience</h5> -->
-        <div class="position-relative ms-2 ps-3 border-start border-2" style="border-color: #02b3d6;">
-
-          <!-- Afluex LLP -->
-          <div class="mb-4">
-            <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
-                style="width: 14px; height: 14px; left: 0; border-color: #02b3d6;"></div>
-            <h6 class="fw-bold mb-1">.NET Developer <span class="fw-normal text-muted">– Afluex LLP</span></h6>
-            <small class="text-muted d-block mb-1">April 2025 – Present</small>
-            <p class="mb-0">Enterprise-level .NET Core apps with REST APIs.</p>
-          </div>
-
-          <!-- Fact Finding Tech -->
-          <div class="mb-4">
-            <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
-                style="width: 14px; height: 14px; left: 0; top: 100%; transform: translate(-50%, -50%); border-color: #02b3d6;"></div>
-            <h6 class="fw-bold mb-1">Software Developer <span class="fw-normal text-muted">– Fact Finding Tech</span></h6>
-            <small class="text-muted d-block mb-1">Dec 2023 – April 2025</small>
-            <p class="mb-0">Worked on ASP.NET Core, Web API, and SQL Server projects.</p>
-          </div>
-
+      <div class="themed-box p-4 about" >
+        <div class="row align-items-center g-4">
+          <!-- Profile Image -->
+        <div class="col-md-5 text-center">
+        <div class="profile-pic-wrapper">
+          <img src="assets/images/SakshiImage.jpeg" class="profile-pic img-fluid" alt="Profile Picture" />
         </div>
       </div>
 
 
+          <!-- About Text -->
+          <div class="col-md-7">
+          <h3>Hello, I'm <strong class="textcolor">Sakshi Pandey</strong></h3> 
+          <!-- <h1 id="typewriter" class="fw-bold"></h1> -->
+          <h5 class="lead fw-bold" id="typewriter"></h3> 
 
-           <!-- Skills -->
-      <div class="tab-pane fade" id="skills" role="tabpanel">
-       
-        <div class="row g-3">
-          
-          <div class="col-12">
-            <span>HTML</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 90%; background-color: #078199;">90%</div>
+            <!-- 🔗 Social Icons -->
+            <div class="social-icons mb-3">
+              <a href="https://in.linkedin.com/in/sakshi-pandey-319955233" target="_blank" class="me-3 text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            <a href="https://www.instagram.com/sakshipandey_22_?utm_source=qr&igsh=c2Nrd2thcjNkNHpt" target="_blank" class="me-3 text-decoration-none">
+      <i class="fab fa-instagram fa-lg"></i>
+      </a>
+              <a href="https://twitter.com/your-profile" target="_blank" class="me-3 text-decoration-none">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+              <a href="mailto:sakshipandey8795@gmail.com" class="text-decoration-none">
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
             </div>
-          </div>
 
-          <div class="col-12">
-            <span>CSS</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div>
-            </div>
-          </div>
+          <!-- Download Button -->
+              <a href="assets/Sakshi Pandey_resume.pdf" download class="btn btn-info mt-2">
+                <i class="fas fa-download"></i> Download CV
+              </a>
 
-          <div class="col-12">
-            <span>Bootstrap</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
-            </div>
           </div>
-
-          <div class="col-12">
-            <span>Ajax</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 75%; background-color:#078199;">75%</div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <span>.NET Core</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 85%; background-color:#078199;">85%</div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <span>MVC</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <span>SQL Server</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <span>PgAdmin</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 70%; background-color: #078199;">70%</div>
-            </div>
-          </div>
-
-          <div class="col-12">
-            <span>GitHub</span>
-            <div class="progress">
-              <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
-            </div>
-          </div>
-
         </div>
-      </div>
+
+    </div>
+    </section>
 
 
-           <!-- Education -->
-    <div class="tab-pane fade " id="education" role="tabpanel">
+    <!-- Tabs Section -->
+    <section id="tabs">
     
-      <div class="position-relative ms-2 ps-3 border-start border-2" style="border-color: #02b3d6;">
+      <div class="card shadow p-4">
+        <div class="row g-4 align-items-start">
 
-        <!-- B.Tech -->
-        <div class="mb-4">
-          <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
-              style="width: 14px; height: 14px; left: 0; border-color: #02b3d6;"></div>
-          <h6 class="fw-bold  mb-1">B.Tech – CSE</h6>
-          <small class="text-muted d-block mb-1">AKTU | 2024 – Present</small>
-          <p class="mb-0">Pursuing Computer Science Engineering.</p>
-        </div>
+          <!-- 🔷 Left: TABS in their own card -->
+          <div class="col-md-6">
+            <div class="card h-100 p-3 ">
+              <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active tabnavlink" id="experience-tab" data-bs-toggle="tab"
+                    data-bs-target="#experience" type="button" role="tab">Experience</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link tabnavlink" id="skills-tab" data-bs-toggle="tab"
+                    data-bs-target="#skills" type="button" role="tab">Skills</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link tabnavlink" id="education-tab" data-bs-toggle="tab"
+                    data-bs-target="#education" type="button" role="tab">Education</button>
+                </li>
+              </ul>
 
-        <!-- Diploma -->
-        <div class="mb-4">
-          <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
-              style="width: 14px; height: 14px; left: 0; top: 100%; transform: translate(-50%, -50%); border-color: #02b3d6;"></div>
-          <h6 class="fw-bold  mb-1">Diploma – CSE</h6>
-          <small class="text-muted d-block mb-1">2019 – 2022</small>
-          <p class="mb-0">3-year diploma in Computer Science.</p>
-        </div>
+              <div class="tab-content">
+            
+          <!-- Experience -->
+          <div class="tab-pane fade show active" id="experience" role="tabpanel">
+            <!-- <h5 class="fw-bold mb-4">Experience</h5> -->
+            <div class="position-relative ms-2 ps-3 border-start border-2" style="border-color: #02b3d6;">
 
-      </div>
-    </div>
+              <!-- Afluex LLP -->
+              <div class="mb-4">
+                <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
+                    style="width: 14px; height: 14px; left: 0; border-color: #02b3d6;"></div>
+                <h6 class="fw-bold mb-1">.NET Developer <span class="fw-normal text-muted">– Afluex LLP</span></h6>
+                <small class="text-muted d-block mb-1">April 2025 – Present</small>
+                <p class="mb-0">Enterprise-level .NET Core apps with REST APIs.</p>
+              </div>
+
+              <!-- Fact Finding Tech -->
+              <div class="mb-4">
+                <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
+                    style="width: 14px; height: 14px; left: 0; top: 100%; transform: translate(-50%, -50%); border-color: #02b3d6;"></div>
+                <h6 class="fw-bold mb-1">Software Developer <span class="fw-normal text-muted">– Fact Finding Tech</span></h6>
+                <small class="text-muted d-block mb-1">Dec 2023 – April 2025</small>
+                <p class="mb-0">Worked on ASP.NET Core, Web API, and SQL Server projects.</p>
+              </div>
+
+            </div>
+          </div>
 
 
+
+              <!-- Skills -->
+          <div class="tab-pane fade" id="skills" role="tabpanel">
+          
+            <div class="row g-3">
+              
+              <div class="col-12">
+                <span>HTML</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%; background-color: #078199;">90%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>CSS</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>Bootstrap</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>Ajax</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 75%; background-color:#078199;">75%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>.NET Core</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%; background-color:#078199;">85%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>MVC</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>SQL Server</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>PgAdmin</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%; background-color: #078199;">70%</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <span>GitHub</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+              <!-- Education -->
+        <div class="tab-pane fade " id="education" role="tabpanel">
+        
+          <div class="position-relative ms-2 ps-3 border-start border-2" style="border-color: #02b3d6;">
+
+            <!-- B.Tech -->
+            <div class="mb-4">
+              <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
+                  style="width: 14px; height: 14px; left: 0; border-color: #02b3d6;"></div>
+              <h6 class="fw-bold  mb-1">B.Tech – CSE</h6>
+              <small class="text-muted d-block mb-1">AKTU | 2024 – Present</small>
+              <p class="mb-0">Pursuing Computer Science Engineering.</p>
+            </div>
+
+            <!-- Diploma -->
+            <div class="mb-4">
+              <div class="position-absolute translate-middle bg-white border border-3 rounded-circle"
+                  style="width: 14px; height: 14px; left: 0; top: 100%; transform: translate(-50%, -50%); border-color: #02b3d6;"></div>
+              <h6 class="fw-bold  mb-1">Diploma – CSE</h6>
+              <small class="text-muted d-block mb-1">2019 – 2022</small>
+              <p class="mb-0">3-year diploma in Computer Science.</p>
+            </div>
 
           </div>
         </div>
 
 
-      </div>
 
-      <!-- 🔷 Right: About Me in its own card -->
-      <div class="col-md-6">
-        <div class="card h-100 p-3 ">
-        <h4 style="text-align: center; font-size: xx-large;color: #078199;">About Me</h4>
-        <p>
-          Hello! I'm <strong>Sakshi Pandey</strong>, a passionate and dedicated <strong>.NET Developer</strong> with over 2 years of experience working on .NET Core technologies. I have a strong understanding of web development using ASP.NET Core, Web API, and SQL Server.
-        </p>
-        <p>
-          Currently, I am pursuing my <strong>B.Tech in Computer Science Engineering</strong> from AKTU. Before this, I completed a <strong>3-year diploma</strong> in Computer Science Engineering, where I built a solid foundation in programming and software development.
-        </p>
-        <p>
-          I enjoy learning new technologies and always try to stay updated with the latest trends in development. I love working on real-time projects that challenge my skills and help me grow as a developer.
-        </p>
-        <p>
-          I am always open to exploring new tools and techniques, and I believe in continuous learning. My goal is to become a full-stack .NET developer and contribute to innovative software solutions.
-        </p>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- 🔷 Right: About Me in its own card -->
+          <div class="col-md-6">
+            <div class="card h-100 p-3 ">
+            <h4 style="text-align: center; font-size: xx-large;color: #078199;">About Me</h4>
+            <p>
+              Hello! I'm <strong>Sakshi Pandey</strong>, a passionate and dedicated <strong>.NET Developer</strong> with over 2 years of experience working on .NET Core technologies. I have a strong understanding of web development using ASP.NET Core, Web API, and SQL Server.
+            </p>
+            <p>
+              Currently, I am pursuing my <strong>B.Tech in Computer Science Engineering</strong> from AKTU. Before this, I completed a <strong>3-year diploma</strong> in Computer Science Engineering, where I built a solid foundation in programming and software development.
+            </p>
+            <p>
+              I enjoy learning new technologies and always try to stay updated with the latest trends in development. I love working on real-time projects that challenge my skills and help me grow as a developer.
+            </p>
+            <p>
+              I am always open to exploring new tools and techniques, and I believe in continuous learning. My goal is to become a full-stack .NET developer and contribute to innovative software solutions.
+            </p>
+
+            </div>
+          </div>
 
         </div>
       </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
- <!-- Latest Projects -->
-<section id="projects" class="pt-0">
-  <div class="card shadow p-4">
-    <div class="text-center mb-4">
-      <h2 class="fw-bold">Latest Projects</h2>
-      <p class="lead">Recent work highlights</p>
-    </div>
+    <!-- Latest Projects -->
+    <section id="projects" class="pt-0">
+      <div class="card shadow p-4">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Latest Projects</h2>
+          <p class="lead">Recent work highlights</p>
+        </div>
 
-    <div class="row g-4">
+        <div class="row g-4">
 
-     <!-- Project 1 -->
-    <div class="col-md-4">
-  <div class="flip-card">
-    <div class="flip-card-inner">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
 
-      <!-- Front Face -->
-      <div class="flip-card-front">
-        <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
-        <h5 class="mt-2">Filmy Kalakar</h5>
-      </div>
+          <!-- Front Face -->
+          <div class="flip-card-front about">
+            <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
+            <h5 class="mt-2">Filmy Kalakar</h5>
+          </div>
 
-      <!-- Back Face -->
-      <div class="flip-card-back">
-        <p>A casting portal with profile listing and rating features.</p>
-        <div class="icons">
-          <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
-          <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+          <!-- Back Face -->
+          <div class="flip-card-back">
+            <p>A casting portal with profile listing and rating features.</p>
+            <div class="icons">
+              <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
+              <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
-
     </div>
-  </div>
-</div>
 
 
-       <!-- Project 2 -->
-   <div class="col-md-4">
-  <div class="flip-card">
-    <div class="flip-card-inner">
+          <!-- Project 2 -->
+      <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
 
-      <!-- Front Face -->
-      <div class="flip-card-front">
-        <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
-        <h5 class="mt-2">Filmy Kalakar</h5>
-      </div>
+          <!-- Front Face -->
+          <div class="flip-card-front about">
+            <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
+            <h5 class="mt-2">Filmy Kalakar</h5>
+          </div>
 
-      <!-- Back Face -->
-      <div class="flip-card-back">
-        <p>A casting portal with profile listing and rating features.</p>
-        <div class="icons">
-          <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
-          <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+          <!-- Back Face -->
+          <div class="flip-card-back">
+            <p>A casting portal with profile listing and rating features.</p>
+            <div class="icons">
+              <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
+              <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
-
     </div>
-  </div>
-</div>
 
 
-      <!-- Project 3 -->
-   <div class="col-md-4">
-    <div class="flip-card">
-    <div class="flip-card-inner">
+          <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="flip-card">
+        <div class="flip-card-inner">
 
-      <!-- Front Face -->
-      <div class="flip-card-front">
-        <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
-        <h5 class="mt-2">Filmy Kalakar</h5>
-      </div>
+          <!-- Front Face -->
+          <div class="flip-card-front about">
+            <img src="assets/images/FilmyKalaKar_Enhanced.jpg" alt="Filmy Kalakar" class="img-fluid rounded" />
+            <h5 class="mt-2">Filmy Kalakar</h5>
+          </div>
 
-      <!-- Back Face -->
-      <div class="flip-card-back">
-        <p>A casting portal with profile listing and rating features.</p>
-        <div class="icons">
-          <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
-          <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+          <!-- Back Face -->
+          <div class="flip-card-back">
+            <p>A casting portal with profile listing and rating features.</p>
+            <div class="icons">
+              <a href="https://demo2.afluex.com/" target="_blank"><i class="fas fa-globe"></i></a>
+              <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://youtube.com/your-demo" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
-
     </div>
-  </div>
-</div>
 
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
 
 
 
 
 
     <!-- Contact Section -->
-<section id="contact" class="pt-0">
-  <div class="card shadow p-4">
-    <h3 class="fw-bold text-center mb-4" style="font-size: xx-large;color: #078199;">Get in Touch</h3>
-    <div class="row g-4">
+    <section id="contact" class="pt-0">
+      <div class="card shadow p-4">
+        <h3 class="fw-bold text-center mb-4" style="font-size: xx-large;color: #078199;">Get in Touch</h3>
+        <div class="row g-4">
 
-      <!-- Google Map Card -->
-      <div class="col-md-6 ">
-        <div class="themed-box">
-          <h5 class="mb-3">Find Me in Lucknow</h5>
-          <div class="ratio ratio-4x3 rounded">
-            <iframe src="https://www.google.com/maps?q=Lucknow&output=embed"
-                    width="100%" height="100%"
-                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <!-- Google Map Card -->
+          <div class="col-md-6 ">
+            <div class="themed-box about">
+              <h5 class="mb-3">Find Me in Lucknow</h5>
+              <div class="ratio ratio-4x3 rounded">
+                <iframe src="https://www.google.com/maps?q=Lucknow&output=embed"
+                        width="100%" height="100%"
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
           </div>
+
+          <!-- Contact Form Card -->
+          <div class="col-md-6">
+            <div class="themed-box about ">
+              <h5 class="mb-3" style="text-align: center; font-size: xx-large;color: #078199;" >Hire Me</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                </div>
+
+              <div class="text-center">
+              <button type="submit" class="btn btn-info w-50">
+                <i class="fas fa-paper-plane me-2"></i>Hire Me
+              </button>
+          </div>
+
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Contact Form Card -->
-      <div class="col-md-6">
-        <div class="themed-box ">
-          <h5 class="mb-3" style="text-align: center; font-size: xx-large;color: #078199;" >Hire Me</h5>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Your Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Your Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
-            </div>
-
-           <div class="text-center">
-          <button type="submit" class="btn btn-info w-50">
-            <i class="fas fa-paper-plane me-2"></i>Hire Me
-          </button>
-      </div>
-
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- Footer -->
-  <footer class="footer text-center">
-  <p class="mb-0">Coded & Designed with <span style="color: red;">&#10084;</span> by <strong>Sakshi Pandey</strong></p>
-</footer>
+      <footer class="footer text-center">
+      <p class="mb-0">Coded & Designed with <span style="color: red;">&#10084;</span> by <strong>Sakshi Pandey</strong></p>
+    </footer>
 
   </div>
   <!-- Page Wrapper End -->
 
 
 
-  <!-- Scroll to Top Button -->
-<button onclick="topFunction()" id="topBtn" class="btn btn-info position-fixed bottom-0 end-0 m-3">↑</button>
-<script>
-  var topBtn = document.getElementById("topBtn");
-  window.onscroll = function () {
-    topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
-  };
-  function topFunction() {
-    document.documentElement.scrollTop = 0;
-  }
-</script>
+
 
   </body>
 </html>
+
+
 
 <!-- Dark Mode Toggle Button -->
 <button id="themeToggleBtn" class="btn btn-sm btn-dark position-fixed top-0 end-0 m-3" onclick="toggleDarkMode()" style="z-index: 9999;">
   <span id="themeIcon">🌙</span>
 </button>
 
-<script>
-  // Check local storage to keep theme across reloads
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("bg-dark", "text-white");
-    document.getElementById("themeIcon").innerText = "☀️";
-  }
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="topBtn" title="Back to Top"
+  class="btn btn-info position-fixed bottom-0 end-0 m-3"
+  style="display: none; z-index: 9999;">
+  ↑
+</button>
 
-  function toggleDarkMode() {
+
+<script>
+  // Wait until DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    const topBtn = document.getElementById("topBtn");
+
+    // Show or hide the button on scroll
+    window.addEventListener("scroll", function () {
+      if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+
+    // Scroll to top when button clicked
+    window.topFunction = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  });
+</script>
+
+<!-- Dark Mode Toggle Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const icon = document.getElementById("themeIcon");
 
-    body.classList.toggle("bg-dark");
-    body.classList.toggle("text-white");
+    // On page load check localStorage
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      icon.innerText = "☀️";
+    }
 
-    // Toggle icon
-    const isDark = body.classList.contains("bg-dark");
-    icon.innerText = isDark ? "☀️" : "🌙";
-
-    // Store preference
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }
+    window.toggleDarkMode = function () {
+      body.classList.toggle("dark-mode");
+      const isDark = body.classList.contains("dark-mode");
+      icon.innerText = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    };
+  });
 </script>
-
-<!-- Start the typewriter effect when the page finishes loading-->
-
+<!-- Typewriter Effect Script -->
 <script>
   const text = ".NET Developer";
   let i = 0;
@@ -500,14 +506,33 @@
       i++;
       setTimeout(typeWriter, speed);
     } else {
-      // Wait and then reset to repeat
       setTimeout(() => {
         document.getElementById("typewriter").innerHTML = "";
         i = 0;
         typeWriter();
-      }, 2000); // wait 2 seconds before restarting
+      }, 2000);
     }
   }
 
   window.onload = typeWriter;
 </script>
+
+<!-- Disable Right-Click and DevTools -->
+<!-- <script>
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable F12, Ctrl+Shift+I/J/C
+  document.onkeydown = function (e) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) // Ctrl+Shift+I/J/C
+    ) {
+      return false;
+    }
+  };
+</script> -->
+
+
+<!--  Add this to fix tab switching -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
