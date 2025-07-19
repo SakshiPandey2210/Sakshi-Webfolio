@@ -14,7 +14,7 @@
   
   <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" href="assets/css/loader.css"> 
-
+  <link rel="stylesheet" href="assets/css/SocialMediaIconsCSS.css"> 
   
 </head>
 
@@ -266,20 +266,32 @@
          <h5> <span class="typewriter textcolor"></span></h1>
 
             <!-- 🔗 Social Icons -->
-            <div class="social-icons mb-3">
-              <a href="https://in.linkedin.com/in/sakshi-pandey-319955233" target="_blank" class="me-3 text-decoration-none">
-                <i class="fab fa-linkedin fa-lg"></i>
-              </a>
-            <a href="https://www.instagram.com/sakshipandey_22_?utm_source=qr&igsh=c2Nrd2thcjNkNHpt" target="_blank" class="me-3 text-decoration-none">
-      <i class="fab fa-instagram fa-lg"></i>
+            <div class="social-icons-custom mb-3">
+    <div class="icon-content">
+      <a href="https://in.linkedin.com/in/sakshi-pandey-319955233" target="_blank" data-social="linkedin">
+        <div class="filled"></div>
+        <i class="fab fa-linkedin-in"></i>
       </a>
-              <!-- <a href="https://twitter.com/your-profile" target="_blank" class="me-3 text-decoration-none">
-                <i class="fab fa-twitter fa-lg"></i>
-              </a> -->
-              <a href="mailto:sakshipandey8795@gmail.com" class="text-decoration-none">
-                <i class="fas fa-envelope fa-lg"></i>
-              </a>
-            </div>
+      <div class="tooltip">LinkedIn</div>
+    </div>
+
+      <div class="icon-content">
+        <a href="https://www.instagram.com/sakshipandey_22_?utm_source=qr&igsh=c2Nrd2thcjNkNHpt" target="_blank" data-social="instagram">
+          <div class="filled"></div>
+          <i class="fab fa-instagram"></i>
+        </a>
+        <div class="tooltip">Instagram</div>
+      </div>
+
+      <div class="icon-content">
+        <a href="mailto:sakshipandey8795@gmail.com" target="_blank" data-social="mail">
+          <div class="filled"></div>
+          <i class="fas fa-envelope"></i>
+        </a>
+        <div class="tooltip">Mail</div>
+      </div>
+    </div>
+
 
           <!-- Download Button -->
               <a href="assets/Sakshi Pandey_resume.pdf" download class="btn btn-info mt-2">
@@ -287,6 +299,8 @@
               </a>
 
           </div>
+
+          
         </div>
 
     </div>
@@ -640,14 +654,14 @@
           <div class="col-md-6">
             <div class="themed-box about ">
               <h5 class="mb-3" style="text-align: center; font-size: xx-large;color: #078199;" >Hire Me</h5>
-              <form>
+            <form action="https://formsubmit.co/sakshipandey8795@gmail.com" method="POST">
                 <div class="mb-3">
                   <label for="name" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter your name" />
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Your Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email"  required/>
                 </div>
                 <div class="mb-3">
                   <label for="message" class="form-label">Your Message</label>
@@ -794,6 +808,14 @@ counters.forEach(counter => {
       document.body.style.overflowY = "auto"; // enable scroll
     }, 2000); // 2 sec delay
   };
+
+  document.querySelectorAll('a.nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
 </script>
 
 

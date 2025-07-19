@@ -1,0 +1,86 @@
+.social-icons-custom {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-content {
+  position: relative;
+}
+
+.icon-content a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #02b3d6;
+  color: #333;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-content a i {
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-content .filled {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-content:hover .filled {
+  height: 100%;
+}
+
+.icon-content:hover a {
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -45px;
+}
+
+/* Colors per icon */
+.icon-content a[data-social="linkedin"] .filled,
+.icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.icon-content a[data-social="instagram"] .filled,
+.icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.icon-content a[data-social="mail"] .filled,
+.icon-content a[data-social="mail"] ~ .tooltip {
+  background-color: #e63946;
+}

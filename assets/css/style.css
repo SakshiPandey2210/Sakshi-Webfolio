@@ -125,15 +125,7 @@ section {
   transform: scale(1.05);
 }
 
-/* Social Icons */
-.social-icons a {
-  color: #02b3d6;
-  transition: color 0.3s ease;
-}
 
-.social-icons a:hover {
-  color: #000000;
-}
 
 .textcolor {
   color: #078199;
@@ -228,7 +220,7 @@ section {
   .dark-mode .about,
   .dark-mode .flip-card-inner,
   .dark-mode .footer {
-    background-color: #1e1e1e !important;
+    background-color: #1e1e1e !important; 
     color: #ffffff !important;
     border-color: #333 !important;
   }
@@ -347,3 +339,7 @@ section {
     text-decoration: none;
   }
 
+ /* Custom white hamburger icon */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
