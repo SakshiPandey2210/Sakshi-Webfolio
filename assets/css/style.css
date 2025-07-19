@@ -336,5 +336,14 @@ section {
   100% { transform: scale(1); }
 }
 
+.company-link {
+    color: #02b3d6;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
 
+  .company-link:hover {
+    color: #0284a2;
+    text-decoration: none;
+  }
 
