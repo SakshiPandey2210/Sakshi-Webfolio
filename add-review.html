@@ -111,44 +111,34 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-document.getElementById("reviewForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec';
 
-  const name = document.getElementById("name").value;
-  const role = document.getElementById("role").value;
-  const message = document.getElementById("message").value;
-  const rating = document.getElementById("rating").value;
-  const photoFile = document.getElementById("photo").files[0];
+  document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  if (!photoFile) {
-    alert("Please upload a profile image");
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = function () {
-    const photoURL = reader.result;
-
-    const review = {
-      name, role, message, rating, photo: photoURL
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      role: form.role.value,
+      message: form.message.value,
+      photo: form.photo.value,
+      rating: form.rating.value
     };
 
-    let reviews = JSON.parse(localStorage.getItem("customReviews")) || [];
-    reviews.push(review);
-    localStorage.setItem("customReviews", JSON.stringify(reviews));
-
-    Swal.fire({
-      title: "Review Submitted!",
-      text: "Your feedback has been added. Visit the main page to view it.",
-      icon: "success",
-      confirmButtonColor: "#078199"
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      Swal.fire("Thank you!", "Your review has been submitted.", "success");
+      form.reset();
+    }).catch(error => {
+      Swal.fire("Oops!", "There was a problem submitting your review.", "error");
+      console.error('Error!', error.message);
     });
-
-    document.getElementById("reviewForm").reset();
-  };
-
-  reader.readAsDataURL(photoFile);
-});
+  });
 </script>
 
 </html>
