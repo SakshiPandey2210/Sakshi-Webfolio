@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Review</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body >
+
+
+  <!-- Page Wrapper Start -->
+  <div class="page-wrapper " id="showwebsite">
+
+    <!-- Responsive Navbar Wrapper -->
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand navbar-brand-lobster" href="#">Sakshi Pandey</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              
+               <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li> 
+             <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+             
+              <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+              <a class="nav-link" href="add-review.html" target="_blank">Add Review</a>
+
+
+
+               
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+
+ <!-- ✅ Review Form Section -->
+  <section class="pt-1 pb-2" style="background-color: #f8f9fa;">
+    <div class="card shadow p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-4">
+              <h2 class="text-center text-info mb-4">Submit a Review</h2>
+             <form id="reviewForm">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" name="name" required class="form-control" placeholder="Full Name">
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="role" class="form-label">Your Role</label>
+      <input type="text" id="role" name="role" required class="form-control" placeholder="Client / Freelancer">
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="photo" class="form-label">Profile Image</label>
+      <input type="file" id="photo" name="photo" class="form-control" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="rating" class="form-label">Rating</label>
+      <input type="number" id="rating" name="rating" class="form-control" min="1" max="5" required placeholder="1 to 5">
+    </div>
+
+    <div class="col-12 mb-3">
+      <label for="message" class="form-label">Your Review</label>
+      <textarea id="message" name="message" required rows="4" class="form-control" placeholder="Write your experience..."></textarea>
+    </div>
+
+    <div class="col-12">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-info">
+          <i class="fas fa-paper-plane me-2"></i>Submit Review
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Footer -->
+      <footer class="footer text-center">
+      <p class="mb-0">Coded & Designed with <span style="color: red;">&#10084;</span> by <strong>Sakshi Pandey</strong></p>
+    </footer>
+
+  </div>
+  <!-- Page Wrapper End -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const role = document.getElementById("role").value;
+  const message = document.getElementById("message").value;
+  const rating = document.getElementById("rating").value;
+  const photoFile = document.getElementById("photo").files[0];
+
+  if (!photoFile) {
+    alert("Please upload a profile image");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function () {
+    const photoURL = reader.result;
+
+    const review = {
+      name, role, message, rating, photo: photoURL
+    };
+
+    let reviews = JSON.parse(localStorage.getItem("customReviews")) || [];
+    reviews.push(review);
+    localStorage.setItem("customReviews", JSON.stringify(reviews));
+
+    Swal.fire({
+      title: "Review Submitted!",
+      text: "Your feedback has been added. Visit the main page to view it.",
+      icon: "success",
+      confirmButtonColor: "#078199"
+    });
+
+    document.getElementById("reviewForm").reset();
+  };
+
+  reader.readAsDataURL(photoFile);
+});
+</script>
+
+</html>
