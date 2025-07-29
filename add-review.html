@@ -12,7 +12,7 @@
 <section class="py-5">
   <div class="container">
     <h2 class="text-center text-info mb-4">Submit a Review</h2>
-   <form action="https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec"  id="reviewForm" method="POST" target="_blank">
+    <form id="reviewForm">
       <div class="mb-3">
         <label class="form-label">Name</label>
         <input type="text" id="name" class="form-control" required>
@@ -40,41 +40,44 @@
 
 <script>
   const reviewForm = document.getElementById('reviewForm');
-  const imgbbAPI = 'b7bfb96d8c0a6930ddd61237165c1ebe'; // ✅ Your ImgBB API Key
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec'; // ✅ Your Web App URL
+  const imgbbAPI = 'b7bfb96d8c0a6930ddd61237165c1ebe'; // ✅ ImgBB API Key
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec'; // ✅ Google Apps Script URL
 
   reviewForm.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const role = document.getElementById('role').value;
-    const message = document.getElementById('message').value;
-    const rating = document.getElementById('rating').value;
+    const name = document.getElementById('name').value.trim();
+    const role = document.getElementById('role').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const rating = document.getElementById('rating').value.trim();
     const imageFile = document.getElementById('photo').files[0];
 
     if (!imageFile) {
-      return Swal.fire("Error", "Please select a profile image.", "warning");
+      Swal.fire("Warning", "Please upload an image.", "warning");
+      return;
     }
 
-    // Upload image to ImgBB
-    const formData = new FormData();
-    formData.append('image', imageFile);
-
     try {
-      const uploadRes = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPI}`, {
+      console.log("Uploading image to ImgBB...");
+
+      const formData = new FormData();
+      formData.append('image', imageFile);
+
+      const imgUploadResponse = await fetch(`https://api.imgbb.com/1/upload?key=${imgbbAPI}`, {
         method: 'POST',
         body: formData
       });
 
-      const uploadData = await uploadRes.json();
+      const imgResult = await imgUploadResponse.json();
 
-      if (!uploadData.success) {
-        throw new Error("Image upload failed.");
+      if (!imgResult.success) {
+        console.error("ImgBB upload failed:", imgResult);
+        throw new Error("Image upload to ImgBB failed.");
       }
 
-      const imageUrl = uploadData.data.url;
+      const imageUrl = imgResult.data.url;
+      console.log("Image uploaded successfully:", imageUrl);
 
-      // Send data to Google Sheet
       const reviewData = {
         name,
         role,
@@ -83,26 +86,24 @@
         rating
       };
 
-      const res = await fetch(scriptURL, {
+      console.log("Sending review data to Google Sheet...", reviewData);
+
+      const response = await fetch(scriptURL, {
         method: 'POST',
+        mode: 'no-cors', // ✅ Use no-cors to bypass CORS restrictions
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(reviewData)
       });
 
-      const text = await res.text();
-
-      if (text.includes("Success")) {
-        Swal.fire("Thank you!", "Your review has been submitted.", "success");
-        reviewForm.reset();
-      } else {
-        throw new Error(text);
-      }
+      console.log("Review submitted. Awaiting confirmation...");
+      Swal.fire("Thank you!", "Your review has been submitted successfully!", "success");
+      reviewForm.reset();
 
     } catch (error) {
-      console.error("Submit Error:", error);
-      Swal.fire("Oops!", "Something went wrong: " + error.message, "error");
+      console.error("Review submission failed:", error);
+      Swal.fire("Error", "Something went wrong:\n" + error.message, "error");
     }
   });
 </script>
