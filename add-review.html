@@ -85,8 +85,8 @@
 
 <script>
   const reviewForm = document.getElementById('reviewForm');
-  const imgbbAPI = 'b7bfb96d8c0a6930ddd61237165c1ebe'; // ✅ ImgBB API Key
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec'; // ✅ Google Apps Script URL
+  const imgbbAPI = 'b7bfb96d8c0a6930ddd61237165c1ebe'; // ✅ Your ImgBB API Key
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec'; // ✅ Your Google Apps Script Web App URL
 
   reviewForm.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -103,8 +103,17 @@
     }
 
     try {
-      console.log("Uploading image to ImgBB...");
+      // ✅ Show loading popup
+      Swal.fire({
+        title: 'Submitting...',
+        text: 'Please wait while your review is being uploaded.',
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        }
+      });
 
+      // ✅ Upload image to ImgBB
       const formData = new FormData();
       formData.append('image', imageFile);
 
@@ -117,12 +126,12 @@
 
       if (!imgResult.success) {
         console.error("ImgBB upload failed:", imgResult);
-        throw new Error("Image upload to ImgBB failed.");
+        throw new Error("Image upload failed.");
       }
 
       const imageUrl = imgResult.data.url;
-      console.log("Image uploaded successfully:", imageUrl);
 
+      // ✅ Prepare review data
       const reviewData = {
         name,
         role,
@@ -131,27 +140,27 @@
         rating
       };
 
-      console.log("Sending review data to Google Sheet...", reviewData);
-
-      const response = await fetch(scriptURL, {
+      // ✅ Send review to Google Sheet
+      await fetch(scriptURL, {
         method: 'POST',
-        mode: 'no-cors', // ✅ Use no-cors to bypass CORS restrictions
+        mode: 'no-cors', // ✅ Required for Apps Script
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(reviewData)
       });
 
-      console.log("Review submitted. Awaiting confirmation...");
+      // ✅ Success Alert
       Swal.fire("Thank you!", "Your review has been submitted successfully!", "success");
       reviewForm.reset();
 
     } catch (error) {
-      console.error("Review submission failed:", error);
+      console.error("Submission error:", error);
       Swal.fire("Error", "Something went wrong:\n" + error.message, "error");
     }
   });
 </script>
+
 
 </body>
 </html>

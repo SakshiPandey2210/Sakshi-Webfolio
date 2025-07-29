@@ -395,3 +395,27 @@ section {
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2302b3d6' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
 }
+
+
+.review-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 3.2em;
+  }
+
+  .review-box.expanded .review-text {
+    -webkit-line-clamp: unset;
+    max-height: none;
+  }
+
+  .view-more {
+    display: inline-block;
+    color: #0dcaf0;
+    font-size: 14px;
+    margin-top: 6px;
+    text-decoration: underline;
+    cursor: pointer;
+  }

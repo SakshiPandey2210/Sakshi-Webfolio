@@ -715,16 +715,15 @@
 
 <!-- Reviews Carousel Section -->
 
- <!-- ✅ Reviews Carousel Section -->
+
 <section id="reviews">
   <div class="card shadow p-4">
     <h2 class="text-center mb-4 text-info">What Clients Say</h2>
 
     <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-      
-    <div class="carousel-inner">
-      <!-- Initially empty or with one placeholder item -->
-   </div>
+      <div class="carousel-inner">
+        <!-- Reviews will be loaded dynamically here -->
+      </div>
 
       <!-- Carousel Arrows -->
       <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
@@ -736,7 +735,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -992,41 +990,54 @@ counters.forEach(counter => {
 
 <!-- ✅ Your Review Loading Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselInner = document.querySelector(".carousel-inner");
-  const apiURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec';
+ document.addEventListener("DOMContentLoaded", function () {
+    const carouselInner = document.querySelector(".carousel-inner");
+    const apiURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec';
 
-  fetch(apiURL)
-    .then(res => res.json())
-    .then(reviews => {
-      if (reviews.length === 0) return;
+    fetch(apiURL)
+      .then(res => res.json())
+      .then(reviews => {
+        if (reviews.length === 0) return;
 
-      // Clear old slides
-      carouselInner.innerHTML = '';
+        carouselInner.innerHTML = ''; // Clear previous
 
-      for (let i = 0; i < reviews.length; i += 3) {
-        const group = reviews.slice(i, i + 3);
-        let slide = `<div class="carousel-item ${i === 0 ? 'active' : ''}"><div class="row g-4">`;
+        for (let i = 0; i < reviews.length; i += 3) {
+          const group = reviews.slice(i, i + 3);
+          let slide = `<div class="carousel-item ${i === 0 ? 'active' : ''}"><div class="row g-4">`;
 
-        group.forEach(r => {
-          const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
-          slide += `
-            <div class="col-md-4 text-center">
-              <div class="card p-3 shadow">
-                <img src="${r.photo}" class="rounded-circle mx-auto mb-3" alt="${r.name}" width="100" height="100">
-                <h5>${r.name}</h5>
-                <small class="text-muted">${r.role}</small>
-                <p>"${r.message}"</p>
-                <div class="star-rating">${stars.split('').map(s => `<span>${s}</span>`).join('')}</div>
-              </div>
-            </div>`;
-        });
+          group.forEach(r => {
+            const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+            slide += `
+              <div class="col-md-4 text-center">
+                <div class="card p-3 shadow review-box">
+                  <img src="${r.photo}" class="rounded-circle mx-auto mb-3" alt="${r.name}" width="100" height="100">
+                  <h5>${r.name}</h5>
+                  <small class="text-muted">${r.role}</small>
+                  <p class="review-text">"${r.message}"</p>
+                  <a href="#" class="view-more">View More</a>
+                  <div class="star-rating">${stars.split('').map(s => `<span>${s}</span>`).join('')}</div>
+                </div>
+              </div>`;
+          });
 
-        slide += `</div></div>`;
-        carouselInner.insertAdjacentHTML('beforeend', slide);
-      }
-    });
-});
+          slide += `</div></div>`;
+          carouselInner.insertAdjacentHTML('beforeend', slide);
+        }
+
+        // Attach view more handlers
+        setTimeout(() => {
+          const viewMoreLinks = carouselInner.querySelectorAll('.view-more');
+          viewMoreLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              const box = this.closest('.review-box');
+              box.classList.toggle('expanded');
+              this.textContent = box.classList.contains('expanded') ? 'View Less' : 'View More';
+            });
+          });
+        }, 0);
+      });
+  });
 </script>
 
 
