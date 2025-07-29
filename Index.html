@@ -992,13 +992,17 @@ counters.forEach(counter => {
 
 <!-- ✅ Your Review Loading Script -->
 <script>
-  fetch("https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec")
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const apiURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec';
+
+  fetch(apiURL)
     .then(res => res.json())
     .then(reviews => {
-      const carouselInner = document.querySelector(".carousel-inner");
       if (reviews.length === 0) return;
 
-      carouselInner.innerHTML = ""; // Clear static reviews
+      // Clear old slides
+      carouselInner.innerHTML = '';
 
       for (let i = 0; i < reviews.length; i += 3) {
         const group = reviews.slice(i, i + 3);
@@ -1021,9 +1025,10 @@ counters.forEach(counter => {
         slide += `</div></div>`;
         carouselInner.insertAdjacentHTML('beforeend', slide);
       }
-    })
-    .catch(error => console.error('Error fetching reviews:', error));
+    });
+});
 </script>
+
 
 
 
