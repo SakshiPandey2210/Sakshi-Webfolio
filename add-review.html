@@ -6,37 +6,76 @@
   <title>Add Review</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <div class="page-wrapper mt-4" id="showwebsite">
+
+    <!-- Responsive Navbar Wrapper -->
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand navbar-brand-lobster" href="#">Sakshi Pandey</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="#tabs">Profile</a></li> -->
+               <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> 
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+             
+            <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                       <a class="nav-link" href="add-review.html" target="_blank">Add Review</a>
+
+
+
+               
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
 
 <section class="py-5">
-  <div class="container">
-    <h2 class="text-center text-info mb-4">Submit a Review</h2>
-    <form id="reviewForm">
-      <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" id="name" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Role</label>
-        <input type="text" id="role" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Review Message</label>
-        <textarea id="message" class="form-control" rows="3" required></textarea>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Rating (1-5)</label>
-        <input type="number" id="rating" class="form-control" min="1" max="5" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Upload Image</label>
-        <input type="file" id="photo" accept="image/*" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-info w-100">Submit Review</button>
-    </form>
+ <div class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Name</label>
+    <input type="text" id="name" class="form-control" required>
   </div>
+  <div class="col-md-6">
+    <label class="form-label">Role</label>
+    <input type="text" id="role" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Rating (1-5)</label>
+    <input type="number" id="rating" class="form-control" min="1" max="5" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Upload Image</label>
+    <input type="file" id="photo" accept="image/*" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <label class="form-label">Review Message</label>
+    <textarea id="message" class="form-control" rows="3" required></textarea>
+  </div>
+  <div class="col-12 text-center mt-3">
+    <button type="submit" class="btn btn-info px-4">Submit Review</button>
+  </div>
+</div>
+
 </section>
+
+   <!-- Footer -->
+      <footer class="footer text-center">
+      <p class="mb-0">Coded & Designed with <span style="color: red;">&#10084;</span> by <strong>Sakshi Pandey</strong></p>
+    </footer>
+
+</div>
 
 <script>
   const reviewForm = document.getElementById('reviewForm');
