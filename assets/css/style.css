@@ -70,20 +70,9 @@ body {
     color: black !important;
 }
 
-.tabnavlink {
-    color: #078199 !important;
-    font-weight: 500;
-}
-
-
 /* =========================================================
    HERO / ABOUT SECTION
    ========================================================= */
-
-.hero {
-    background-color: #f8f9fa;
-    padding: 3rem 0;
-}
 
 .profile-pic-wrapper {
     display: inline-block;
@@ -93,13 +82,6 @@ body {
     box-shadow:
         0 0 15px rgba(8, 129, 153, 0.8);
 }
-
-.profile-pic {
-    border-radius: 50%;
-    max-width: 250px;
-    display: block;
-}
-
 
 /* =========================================================
    CARD STYLING
@@ -217,11 +199,6 @@ section {
 /* =========================================================
    TYPEWRITER & BRANDING
    ========================================================= */
-
-#typewriter {
-    font-size: 2.2rem;
-    color: #078199;
-}
 
 .navbar-brand-lobster {
     font-family: 'Lobster', cursive;
@@ -1027,79 +1004,9 @@ body.dark-mode .achievement-bottom i {
    REDUCE MOTION
    ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
-
-    .achievement-glow,
-    .achievement-dot,
-    .achievement-card,
-    .achievement-icon {
-        animation: none !important;
-
-        transition: none !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    ACHIEVEMENT ANIMATIONS
    ========================================================= */
-
-@keyframes gradientMove {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-@keyframes pulse {
-
-    0% {
-        text-shadow: 0 0 0px #078199;
-    }
-
-    50% {
-        text-shadow: 0 0 10px #078199;
-    }
-
-    100% {
-        text-shadow: 0 0 0px #078199;
-    }
-}
-
-
-@keyframes pop {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 
 /* =========================================================
    COMPANY LINK
@@ -1783,36 +1690,6 @@ body.dark-mode .achievement-bottom i {
    TECHNOLOGIES
    ========================================================= */
 
-.back-tech {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-top: 18px;
-}
-
-.back-tech span {
-    padding: 6px 10px;
-
-    border-radius: 7px;
-
-    color: #8de5f5;
-
-    background:
-        rgba(7, 129, 153, 0.14);
-
-    border:
-        1px solid
-        rgba(7, 129, 153, 0.3);
-
-    font-size: 9px;
-
-    font-weight: 700;
-}
-
-
 /* =========================================================
    VIEW PROJECT
    ========================================================= */
@@ -2046,13 +1923,3 @@ body.dark-mode .flip-project-back {
    REDUCE MOTION
    ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
-
-    .flip-project-inner,
-    .flip-project-front img,
-    .flip-indicator,
-    .flip-dot {
-        animation: none !important;
-        transition: none !important;
-    }
-}

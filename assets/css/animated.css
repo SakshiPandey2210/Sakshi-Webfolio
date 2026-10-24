@@ -1,0 +1,99 @@
+/* =========================================================
+   ANIMATED ICONS & EFFECTS  (theme: teal #078199 / #0dbfe2)
+   Load AFTER style.css, loader.css, Downloadbutton.css
+   ========================================================= */
+
+/* ---------- Scroll progress + reveal ---------- */
+#sp{position:fixed;top:0;left:0;height:4px;width:0;z-index:99999;background:linear-gradient(90deg,#078199,#0dbfe2,#20c997)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Navbar underline ---------- */
+.navbar .nav-link{position:relative}
+.navbar .nav-link::after{content:"";position:absolute;left:50%;bottom:2px;width:0;height:2px;background:#fff;transition:.3s;transform:translateX(-50%)}
+.navbar .nav-link:hover::after{width:70%}
+
+/* ---------- Hero: glowing ring + floating tech icons ---------- */
+.profile-pic-wrapper{position:relative;animation:floaty 4s ease-in-out infinite}
+.profile-pic-wrapper::before{content:"";position:absolute;inset:-9px;border-radius:50%;background:conic-gradient(#078199,transparent 30%,#0dbfe2,transparent 70%,#078199);animation:spin 4s linear infinite;filter:blur(2px)}
+.profile-pic{position:relative;z-index:1;background:#fff}
+#about .about{position:relative;overflow:hidden}
+#about .about .row{position:relative;z-index:2}
+.fi{position:absolute;color:#078199;opacity:.18;z-index:1;pointer-events:none;animation:floaty var(--d,6s) ease-in-out infinite,sway var(--d,6s) ease-in-out infinite alternate}
+.custom-btn:hover .custom-btn__icon{animation:dl .8s ease-in-out infinite}
+
+/* ---------- Timeline dots ---------- */
+.position-absolute.rounded-circle{animation:ripple 2s infinite}
+
+/* ---------- Skills tab ---------- */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 18px}
+.skill-item{display:flex;align-items:center;gap:12px}
+.skill-ico{flex:0 0 42px;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;background:linear-gradient(135deg,#078199,#0dbfe2);box-shadow:0 6px 14px rgba(7,129,153,.35);animation:floaty 3s ease-in-out infinite}
+.skill-item:nth-child(3n+2) .skill-ico{animation-delay:-.8s}
+.skill-item:nth-child(3n) .skill-ico{animation-delay:-1.6s}
+.skill-item:hover .skill-ico{animation:wiggle .6s ease 2}
+.skill-info{flex:1;min-width:0}
+.skill-top{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px}
+.skill-top b{color:#078199}
+.skill-bar{height:6px;background:#d9f2f6;border-radius:6px;overflow:hidden}
+.skill-bar i{display:block;height:100%;width:var(--w);border-radius:6px;background:linear-gradient(90deg,#078199,#0dbfe2)}
+.tab-pane.active .skill-bar i{transform-origin:left;animation:grow 1.2s ease-out both}
+@media(max-width:575px){.skill-grid{grid-template-columns:1fr}}
+
+/* ---------- Tech stack marquee (moving icons) ---------- */
+.tech-wrap{max-width:1150px;margin:auto;padding:0 20px}
+.marquee{overflow:hidden;margin-bottom:16px;padding:6px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+.marquee.reverse .marquee-track{animation-direction:reverse}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-group{display:flex;gap:14px;padding-right:14px}
+.tech-chip{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:40px;white-space:nowrap;font-weight:600;font-size:15px;color:#05606f;background:#e0f7fa;border:1px solid rgba(7,129,153,.3);box-shadow:0 6px 16px rgba(7,129,153,.15);transition:transform .3s,box-shadow .3s,background .3s,color .3s}
+.tech-chip i{font-size:20px;color:#078199;animation:pulseI 2.4s ease-in-out infinite;transition:color .3s}
+.tech-chip:hover{transform:translateY(-5px) scale(1.06);background:linear-gradient(135deg,#078199,#0dbfe2);color:#fff;box-shadow:0 10px 22px rgba(7,129,153,.4)}
+.tech-chip:hover i{color:#fff;animation:spin .8s linear infinite}
+
+/* ---------- Services icons (each one moves differently) ---------- */
+.service-icon{display:inline-flex!important;align-items:center;justify-content:center;width:74px;height:74px;border-radius:50%;color:#fff!important;background:linear-gradient(135deg,#078199,#0dbfe2);box-shadow:0 8px 22px rgba(7,129,153,.35);position:relative}
+.service-icon::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(7,129,153,.45);animation:spin 8s linear infinite}
+#services .row>div:nth-child(1) .service-icon{animation:pulseG 2s infinite}
+#services .row>div:nth-child(2) .service-icon{animation:bounce 1.8s infinite}
+#services .row>div:nth-child(3) .service-icon{animation:wiggle 2.2s infinite}
+#services .row>div:nth-child(4) .service-icon{animation:rocket 2s ease-in-out infinite}
+#services .row>div:nth-child(5) .service-icon{animation:swing 2s ease-in-out infinite}
+#services .row>div:nth-child(6) .service-icon{animation:floaty 2.5s ease-in-out infinite}
+
+/* ---------- Projects (flip card back) ---------- */
+.back-icon{animation:floaty 3s ease-in-out infinite}
+.back-icon i{animation:pulseI 2s infinite}
+
+/* ---------- Achievements ---------- */
+.achievement-icon svg{animation:floaty 3s ease-in-out infinite}
+.icon-ring{position:absolute;inset:-9px;border-radius:50%;border:2px dashed rgba(7,129,153,.5);animation:spin 7s linear infinite}
+.icon-ring::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:#0dbfe2;box-shadow:0 0 10px #0dbfe2}
+
+/* ---------- Floating social + back-to-top ---------- */
+.social-link i{animation:wiggle 3s infinite}
+.social-link.twitter i{animation:pulseI 1.5s infinite}
+#topBtn{animation:bounce 2s infinite}
+
+/* ---------- Dark mode for new parts ---------- */
+body.dark-mode .tech-chip{background:#2b2b2b;color:#fff;border-color:rgba(102,217,239,.3)}
+body.dark-mode .tech-chip i{color:#66d9ef}
+body.dark-mode .skill-bar{background:#333}
+body.dark-mode .skill-top b{color:#66d9ef}
+body.dark-mode .fi{color:#66d9ef}
+
+/* ---------- Keyframes ---------- */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes sway{from{margin-left:0}to{margin-left:18px}}
+@keyframes bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px)}60%{transform:translateY(-4px)}}
+@keyframes wiggle{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-14deg)}92%{transform:rotate(14deg)}95%{transform:rotate(-8deg)}}
+@keyframes swing{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+@keyframes rocket{0%,100%{transform:translate(0,0)}50%{transform:translate(5px,-9px)}}
+@keyframes pulseG{0%,100%{box-shadow:0 0 0 0 rgba(7,129,153,.55)}70%{box-shadow:0 0 0 18px rgba(7,129,153,0)}}
+@keyframes pulseI{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(7,129,153,.6)}100%{box-shadow:0 0 0 12px rgba(7,129,153,0)}}
+@keyframes grow{from{transform:scaleX(0)}}
+@keyframes dl{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes marquee{to{transform:translateX(-50%)}}

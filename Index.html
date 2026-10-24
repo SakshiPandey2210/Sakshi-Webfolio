@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +16,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/loader.css">
   <link rel="stylesheet" href="assets/css/Downloadbutton.css">
+  <!-- Lobster font (navbar brand) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- Animated icons & effects -->
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/enhance.css">
 
 </head>
 
@@ -237,7 +243,7 @@
 
               <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-              <a class="nav-link" href="add-review.html" target="_blank">Add Review</a>
+              <li class="nav-item"><a class="nav-link" href="add-review.html" target="_blank">Add Review</a></li>
 
 
 
@@ -366,17 +372,119 @@
 
               <!-- 📊 Skills Tab -->
               <div class="tab-pane fade" id="skills" role="tabpanel">
-                <div class="row g-3">
-                  <!-- Repeat for each skill -->
-                  <div class="col-12"><span>HTML</span><div class="progress"><div class="progress-bar" style="width: 90%; background-color: #078199;">90%</div></div></div>
-                  <div class="col-12"><span>CSS</span><div class="progress"><div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div></div></div>
-                  <div class="col-12"><span>Bootstrap</span><div class="progress"><div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div></div></div>
-                  <div class="col-12"><span>Ajax</span><div class="progress"><div class="progress-bar" style="width: 75%; background-color: #078199;">75%</div></div></div>
-                  <div class="col-12"><span>.NET Core</span><div class="progress"><div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div></div></div>
-                  <div class="col-12"><span>MVC</span><div class="progress"><div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div></div></div>
-                  <div class="col-12"><span>SQL Server</span><div class="progress"><div class="progress-bar" style="width: 85%; background-color: #078199;">85%</div></div></div>
-                  <div class="col-12"><span>PgAdmin</span><div class="progress"><div class="progress-bar" style="width: 70%; background-color: #078199;">70%</div></div></div>
-                  <div class="col-12"><span>GitHub</span><div class="progress"><div class="progress-bar" style="width: 80%; background-color: #078199;">80%</div></div></div>
+                <div class="skill-grid">
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-html5"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>HTML</span><b>90%</b></div>
+                      <div class="skill-bar"><i style="--w:90%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-css3-alt"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>CSS</span><b>85%</b></div>
+                      <div class="skill-bar"><i style="--w:85%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-js"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>JavaScript</span><b>80%</b></div>
+                      <div class="skill-bar"><i style="--w:80%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-bootstrap"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>Bootstrap</span><b>80%</b></div>
+                      <div class="skill-bar"><i style="--w:80%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>jQuery</span><b>80%</b></div>
+                      <div class="skill-bar"><i style="--w:80%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-sync-alt"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>Ajax</span><b>75%</b></div>
+                      <div class="skill-bar"><i style="--w:75%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-hashtag"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>C#</span><b>85%</b></div>
+                      <div class="skill-bar"><i style="--w:85%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-microsoft"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>.NET Core</span><b>85%</b></div>
+                      <div class="skill-bar"><i style="--w:85%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-layer-group"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>.NET Core MVC</span><b>80%</b></div>
+                      <div class="skill-bar"><i style="--w:80%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-network-wired"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>REST API</span><b>85%</b></div>
+                      <div class="skill-bar"><i style="--w:85%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-database"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>SQL Server</span><b>85%</b></div>
+                      <div class="skill-bar"><i style="--w:85%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-server"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>PostgreSQL (pgAdmin)</span><b>70%</b></div>
+                      <div class="skill-bar"><i style="--w:70%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-bolt"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>Dapper</span><b>75%</b></div>
+                      <div class="skill-bar"><i style="--w:75%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-cubes"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>Entity Framework Core</span><b>75%</b></div>
+                      <div class="skill-bar"><i style="--w:75%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fab fa-github"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>GitHub</span><b>80%</b></div>
+                      <div class="skill-bar"><i style="--w:80%"></i></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-ico"><i class="fas fa-paper-plane"></i></div>
+                    <div class="skill-info">
+                      <div class="skill-top"><span>Postman</span><b>75%</b></div>
+                      <div class="skill-bar"><i style="--w:75%"></i></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -413,12 +521,29 @@
 </section>
 
 
+    <!-- Tech Stack (moving icons) -->
+    <section id="techstack" class="py-4">
+      <div class="tech-wrap">
+        <div class="flip-project-heading text-center" style="margin-bottom:30px;">
+          <div class="flip-small-title"><span class="flip-dot"></span>MY SKILLS<span class="flip-dot"></span></div>
+          <h2>Tech <span>Stack</span></h2>
+          <p>Technologies I work with every day</p>
+        </div>
+        <div class="marquee "><div class="marquee-track"><div class="marquee-group"><span class="tech-chip"><i class="fab fa-html5"></i>HTML5</span><span class="tech-chip"><i class="fab fa-css3-alt"></i>CSS3</span><span class="tech-chip"><i class="fab fa-js"></i>JavaScript</span><span class="tech-chip"><i class="fab fa-bootstrap"></i>Bootstrap</span><span class="tech-chip"><i class="fas fa-wand-magic-sparkles"></i>jQuery</span><span class="tech-chip"><i class="fas fa-sync-alt"></i>Ajax</span><span class="tech-chip"><i class="fab fa-github"></i>GitHub</span><span class="tech-chip"><i class="fas fa-paper-plane"></i>Postman</span></div><div class="marquee-group" aria-hidden="true"><span class="tech-chip"><i class="fab fa-html5"></i>HTML5</span><span class="tech-chip"><i class="fab fa-css3-alt"></i>CSS3</span><span class="tech-chip"><i class="fab fa-js"></i>JavaScript</span><span class="tech-chip"><i class="fab fa-bootstrap"></i>Bootstrap</span><span class="tech-chip"><i class="fas fa-wand-magic-sparkles"></i>jQuery</span><span class="tech-chip"><i class="fas fa-sync-alt"></i>Ajax</span><span class="tech-chip"><i class="fab fa-github"></i>GitHub</span><span class="tech-chip"><i class="fas fa-paper-plane"></i>Postman</span></div></div></div>
+        <div class="marquee reverse"><div class="marquee-track"><div class="marquee-group"><span class="tech-chip"><i class="fas fa-hashtag"></i>C#</span><span class="tech-chip"><i class="fab fa-microsoft"></i>.NET Core</span><span class="tech-chip"><i class="fas fa-layer-group"></i>.NET Core MVC</span><span class="tech-chip"><i class="fas fa-network-wired"></i>REST API</span><span class="tech-chip"><i class="fas fa-database"></i>SQL Server</span><span class="tech-chip"><i class="fas fa-server"></i>PostgreSQL</span><span class="tech-chip"><i class="fas fa-bolt"></i>Dapper</span><span class="tech-chip"><i class="fas fa-cubes"></i>EF Core</span></div><div class="marquee-group" aria-hidden="true"><span class="tech-chip"><i class="fas fa-hashtag"></i>C#</span><span class="tech-chip"><i class="fab fa-microsoft"></i>.NET Core</span><span class="tech-chip"><i class="fas fa-layer-group"></i>.NET Core MVC</span><span class="tech-chip"><i class="fas fa-network-wired"></i>REST API</span><span class="tech-chip"><i class="fas fa-database"></i>SQL Server</span><span class="tech-chip"><i class="fas fa-server"></i>PostgreSQL</span><span class="tech-chip"><i class="fas fa-bolt"></i>Dapper</span><span class="tech-chip"><i class="fas fa-cubes"></i>EF Core</span></div></div></div>
+      </div>
+    </section>
+
+
     <!-- Services Section -->
     <section id="services" class="py-5">
       <div class="container">
         <div class="card shadow p-4">
-          <h2 class="section-title text-center mb-3" style="font-size: xx-large; color: #078199;">My Services</h2>
-          <p class="text-center mb-4 lead">What I Offer</p>
+          <div class="flip-project-heading text-center">
+            <div class="flip-small-title"><span class="flip-dot"></span>WHAT I OFFER<span class="flip-dot"></span></div>
+            <h2>My <span>Services</span></h2>
+            <p>Solutions I can build for you, from database to deployment</p>
+          </div>
 
           <div class="row g-4">
 
@@ -517,6 +642,13 @@
         </div>
 
 
+        <!-- Filter tabs -->
+        <div class="pc-filter" role="group" aria-label="Filter projects">
+            <button type="button" class="active" data-filter="all" aria-pressed="true">All projects</button>
+            <button type="button" data-filter="apps" aria-pressed="false">Business apps</button>
+            <button type="button" data-filter="sites" aria-pressed="false">Websites</button>
+        </div>
+
         <!-- Projects -->
         <div class="flip-project-grid">
 
@@ -527,7 +659,7 @@
 
             <a href="https://demo6.afluex.com/"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="apps">
 
                 <div class="flip-project-inner">
 
@@ -603,7 +735,7 @@
 
             <a href="https://tncglobal.in/"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="sites">
 
                 <div class="flip-project-inner">
 
@@ -675,7 +807,7 @@
 
             <a href="https://phoolbadankushwaha.com/"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="sites">
 
                 <div class="flip-project-inner">
 
@@ -747,7 +879,7 @@
 
             <a href="https://filmykalakar.netlify.app"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="sites">
 
                 <div class="flip-project-inner">
 
@@ -819,7 +951,7 @@
 
             <a href="assets/pdf/InterrogationT_Project.pdf.pdf"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="apps">
 
                 <div class="flip-project-inner">
 
@@ -891,7 +1023,7 @@
 
             <a href="https://erp.afluex.com/"
                target="_blank"
-               class="flip-project-card">
+               class="flip-project-card" data-cat="apps">
 
                 <div class="flip-project-inner">
 
@@ -1005,42 +1137,10 @@
                 <div class="achievement-glow"></div>
 
                 <div class="achievement-icon experience-icon">
-
-        <svg xmlns="http://www.w3.org/2000/svg"
-            width="42"
-            height="42"
-            fill="none"
-            viewBox="0 0 24 24">
-
-            <rect x="3" y="6" width="18" height="14"
-                  rx="3"
-                  stroke="currentColor"
-                  stroke-width="1.8"/>
-
-            <path d="M8 6V4.8C8 3.8 8.8 3 9.8 3h4.4C15.2 3 16 3.8 16 4.8V6"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"/>
-
-            <path d="M3 11h18"
-                  stroke="currentColor"
-                  stroke-width="1.8"/>
-
-            <path d="M10 14h4"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"/>
-
-            <path d="M12 12.5v3"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"/>
-
-        </svg>
-
-          <span class="icon-ring"></span>
-
-                   </div>
+                    <i class="fas fa-laptop-code ai" aria-hidden="true"></i>
+                    <span class="ach-spark s1"></span><span class="ach-spark s2"></span><span class="ach-spark s3"></span>
+                    <span class="icon-ring"></span>
+                </div>
 
 
                 <div class="achievement-number">
@@ -1084,49 +1184,10 @@
                 <div class="achievement-glow"></div>
 
                <div class="achievement-icon project-icon">
-
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    fill="none"
-                    viewBox="0 0 24 24">
-
-                    <path
-                        d="M14.5 4.5C17 2 20 2 20 2s0 3-2.5 5.5L13 12l-1 4-4-4 4-1 2.5-6.5Z"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linejoin="round"/>
-
-                    <circle
-                        cx="16.5"
-                        cy="7.5"
-                        r="1.5"
-                        stroke="currentColor"
-                        stroke-width="1.7"/>
-
-                    <path
-                        d="M8 14l-3 3"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"/>
-
-                    <path
-                        d="M6 18l-2 2"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"/>
-
-                    <path
-                        d="M10 17l-1 3"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"/>
-
-                </svg>
-
-                        <span class="icon-ring"></span>
-
-                    </div>
+                    <i class="fas fa-rocket ai" aria-hidden="true"></i>
+                    <span class="ach-spark s1"></span><span class="ach-spark s2"></span><span class="ach-spark s3"></span>
+                    <span class="icon-ring"></span>
+                </div>
 
 
                 <div class="achievement-number">
@@ -1170,44 +1231,10 @@
                 <div class="achievement-glow"></div>
 
             <div class="achievement-icon client-icon">
-
-              <svg xmlns="http://www.w3.org/2000/svg"
-                  width="44"
-                  height="44"
-                  fill="none"
-                  viewBox="0 0 24 24">
-
-                  <circle
-                      cx="9"
-                      cy="8"
-                      r="3"
-                      stroke="currentColor"
-                      stroke-width="1.8"/>
-
-                  <path
-                      d="M3.5 19c.5-3.2 2.4-5 5.5-5s5 1.8 5.5 5"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"/>
-
-                  <circle
-                      cx="17"
-                      cy="9"
-                      r="2.3"
-                      stroke="currentColor"
-                      stroke-width="1.6"/>
-
-                  <path
-                      d="M16 14c2.5.1 4.1 1.5 4.5 4"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"/>
-
-              </svg>
-
-              <span class="icon-ring"></span>
-
-          </div>
+                    <i class="fas fa-handshake ai" aria-hidden="true"></i>
+                    <span class="ach-spark s1"></span><span class="ach-spark s2"></span><span class="ach-spark s3"></span>
+                    <span class="icon-ring"></span>
+                </div>
 
                 <div class="achievement-number">
 
@@ -1255,121 +1282,37 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
-<section id="reviews" class="py-5">
-  <div class="container">
+<section id="reviews" class="rv-section">
+  <div class="rv-wrap">
 
-   <h2 id="reviewMainHeading" class="text-center fw-bold mb-2" style="color: #078199; font-size: 2rem;">
-    Testimonials
-    </h2>
-    <!-- <h5 class="text-center">What Clients Say</h2> -->
-    <p class="text-center" >Real feedback from those I've worked with – straight from the source.</p>
-
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper" id="reviews-wrapper">
-       
-      </div>
-
-   
-      <div class="swiper-pagination mt-2"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div class="flip-project-heading text-center">
+      <div class="flip-small-title"><span class="flip-dot"></span>TESTIMONIALS<span class="flip-dot"></span></div>
+      <h2>What People <span>Say</span></h2>
+      <p>Real feedback from the people I have worked with.</p>
     </div>
+
+    <div class="rv-summary">
+      <div class="rv-avg" id="rvAvgBox" hidden>
+        <b id="rvAvg">0.0</b>
+        <div><div id="rvAvgStars"></div><small id="rvCount"></small></div>
+      </div>
+      <a class="rv-add" href="add-review.html" target="_blank"><i class="fas fa-pen"></i>Write a review</a>
+    </div>
+
+    <div class="rv-skel" id="rvSkeleton" aria-hidden="true"><div></div><div></div><div></div></div>
+
+    <div class="swiper mySwiper" hidden>
+      <div class="swiper-wrapper" id="reviews-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" aria-label="Previous review"></div>
+      <div class="swiper-button-next" aria-label="Next review"></div>
+    </div>
+
   </div>
 </section>
 
-
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Init -->
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: false,
-      autoplay: false,
-      spaceBetween: 30,
-      slidesPerView: 1,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-  </script>
-
-  <!-- Styling -->
-  <style>
-    .swiper-wrapper {
-      height: auto;
-    }
-
-    .testimonial-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      text-align: center;
-    }
-
-    .testimonial-card img {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid  #078199;
-      margin-bottom: 10px;
-    }
-
-    .testimonial-card p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 0;
-    }
-
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: 50%;
-      transform: translateY(-50%);
-      color:  #078199;
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(7, 129, 153, 0.8);
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-
-
-    @media (max-width: 767px) {
-      .swiper-button-prev {
-        left: 10px;
-      }
-
-      .swiper-button-next {
-        right: 10px;
-      }
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color:  #078199;
-    }
-  </style>
 
 
 
@@ -1381,94 +1324,88 @@
 
 
   <!-- Contact Section -->
-  <section id="contact" class="pt-0">
-    <div class="card shadow p-4">
-      <h3 class="fw-bold text-center mb-5" style="font-size: xx-large; color: #078199;">Get in Touch</h3>
+  <section id="contact" class="ct-section">
+    <div class="ct-wrap">
 
-      <div class="row g-4">
-
-        <!-- Google Map -->
-        <div class="col-12 col-lg-6">
-          <div class="themed-box about p-3 h-100  d-flex flex-column justify-content-around">
-            <h5 class="mb-3 text-center text-md-start">Find Me in Lucknow</h5>
-            <div class="ratio ratio-4x3 rounded overflow-hidden">
-              <iframe src="https://www.google.com/maps?q=Lucknow&output=embed" style="border:0;" allowfullscreen
-                height="100%" loading="lazy" class="h-100">
-              </iframe>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="col-12 col-lg-6">
-          <div class="themed-box about h-100">
-            <h5 class="text-center mb-4" style="font-size: xx-large; color: #078199;">Hire Me</h5>
-
-            <form class="row" id="hireMeForm" action="https://formsubmit.co/2afe6e768baf3c0c1f800f11010cd4f6"
-              method="POST">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New Hire Me Message!">
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_redirect" value="false">
-
-              <div class="col-md-6 mb-3">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
-                  required />
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <label for="mobile" class="form-label">Mobile Number</label>
-                <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="Enter your mobile number"
-                  pattern="[0-9]{10}" required />
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <label for="city" class="form-label">Your City</label>
-                <input type="text" name="city" id="city" class="form-control" placeholder="Enter your city" required />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea name="message" id="message" class="form-control w-100" rows="3"
-                  placeholder="Write your message" required></textarea>
-              </div>
-
-      <div class="col-md-12 d-flex justify-content-center">
-        <button type="submit" class="custom-btn mt-3">
-          <svg class="custom-btn__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4
-              -4 1.79-4 4 1.79 4 4 4zm0 2c-2.67
-              0-8 1.34-8 4v2h16v-2c0-2.66
-              -5.33-4-8-4z" />
-          </svg>
-          <span>Hire Me</span>
-        </button>
+      <div class="flip-project-heading text-center">
+        <div class="flip-small-title"><span class="flip-dot"></span>CONTACT<span class="flip-dot"></span></div>
+        <h2>Get in <span>Touch</span></h2>
+        <p>Have a project in mind? Send me a message and I will get back to you.</p>
       </div>
 
+      <div class="ct-grid">
 
-
-
-            </form>
+        <!-- Map -->
+        <div class="ct-card ct-map-card" style="--c:0">
+          <div class="ct-card-head">
+            <div class="ct-card-ico"><i class="fas fa-map-location-dot"></i></div>
+            <div><h4>Find Me in Lucknow</h4><small>Uttar Pradesh, India</small></div>
+          </div>
+          <div class="ct-map">
+            <iframe src="https://www.google.com/maps?q=Lucknow,+Uttar+Pradesh&z=12&output=embed" title="Map of Lucknow" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="ct-map-chip"><span class="ct-pin"></span>Based in Lucknow</div>
+          </div>
+          <div class="ct-map-actions">
+            <a class="ct-ghost" href="https://www.google.com/maps/search/?api=1&query=Lucknow%2C+Uttar+Pradesh" target="_blank" rel="noopener"><i class="fas fa-diamond-turn-right"></i>Get directions</a>
+            <a class="ct-ghost" href="tel:9517603870"><i class="fas fa-phone"></i>Call me</a>
           </div>
         </div>
+
+        <!-- Form -->
+        <div class="ct-card ct-form-card" style="--c:1">
+          <div class="ct-card-head">
+            <div class="ct-card-ico"><i class="fas fa-handshake"></i></div>
+            <div><h4>Hire Me</h4><small>I usually reply within a few hours</small></div>
+          </div>
+
+          <form id="hireMeForm" class="ct-form" action="https://formsubmit.co/2afe6e768baf3c0c1f800f11010cd4f6" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Hire Me Message!">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_redirect" value="false">
+
+            <div class="ct-field" style="--i:1">
+              <input type="text" name="name" id="name" placeholder=" " autocomplete="name" required>
+              <label for="name">Your Name</label><i class="fas fa-user ct-ico"></i><span class="ct-bar"></span>
+            </div>
+            <div class="ct-field" style="--i:2">
+              <input type="email" name="email" id="email" placeholder=" " autocomplete="email" required>
+              <label for="email">Your Email</label><i class="fas fa-envelope ct-ico"></i><span class="ct-bar"></span>
+            </div>
+            <div class="ct-field" style="--i:3">
+              <input type="tel" name="mobile" id="mobile" placeholder=" " autocomplete="tel" pattern="[0-9]{10}" inputmode="numeric" maxlength="10" required>
+              <label for="mobile">Mobile Number</label><i class="fas fa-phone ct-ico"></i><span class="ct-bar"></span>
+            </div>
+            <div class="ct-field" style="--i:4">
+              <input type="text" name="city" id="city" placeholder=" " autocomplete="address-level2" required>
+              <label for="city">Your City</label><i class="fas fa-location-dot ct-ico"></i><span class="ct-bar"></span>
+            </div>
+            <div class="ct-field ct-wide" style="--i:5">
+              <textarea name="message" id="message" rows="4" placeholder=" " required></textarea>
+              <label for="message">Your Message</label><i class="fas fa-pen ct-ico"></i><span class="ct-bar"></span>
+            </div>
+
+            <div class="ct-wide ct-submit" style="--i:6">
+              <button type="submit" class="hire-btn">
+                <span class="hb-text"><i class="fas fa-paper-plane hb-plane"></i><span>Hire Me</span></span>
+                <span class="hb-load" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="hb-done" aria-hidden="true"><i class="fas fa-check"></i>Sent</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
 
 
   <div class="float-container">
-    <a href="#" class="social-link twitter" target="_blank">
+    <button type="button" class="social-link twitter vp-trigger" id="vpOpen" aria-haspopup="dialog" aria-controls="visitorPanel" aria-label="Open visitor insights">
       <i class="fa fa-eye"></i>
-      <span class="label">Total Visitor</span>
-    </a>
+      <span class="vp-badge" id="vpBadge">–</span>
+      <span class="label">Visitors · <b id="vpMini">–</b></span>
+    </button>
     <!-- <a href="#" class="social-link facebook" target="_blank">
       <i class="fab fa-facebook-f"></i>
       <span class="label">Facebook</span>
@@ -1487,8 +1424,8 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-left"
-   <p>Copyright © 2025 All Rights Reserved</p>
+    <div class="footer-left">
+      <p>Copyright © <span id="year">2026</span> All Rights Reserved</p>
 
     </div>
     <div class="footer-right" >
@@ -1498,35 +1435,54 @@
 
   </div>
   <!-- Page Wrapper End -->
-<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+<div class="modal fade rv-modal" id="reviewModal" tabindex="-1" aria-labelledby="reviewerName" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content Achievements">
-      <div class="modal-header">
-        <h5 class="modal-title" id="reviewModalLabel">Review Detail</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content rv-modal-content">
+      <button type="button" class="btn-close rv-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="rv-modal-top" aria-hidden="true"><i></i><i></i><i></i><i class="fas fa-quote-left"></i></div>
+      <div class="rv-modal-avatar"><img id="reviewerPhoto" src="" alt="Reviewer"></div>
+      <div class="rv-modal-body">
+        <h5 id="reviewerName" class="rv-a" style="--d:0"></h5>
+        <small id="reviewerRole" class="rv-a" style="--d:60"></small><br>
+        <div id="reviewerStars"></div>
+        <div class="rv-modal-msg rv-a" style="--d:380"><p id="reviewerMessage"></p></div>
       </div>
-      <div class="modal-body ">
-        <div class="text-center mb-3">
-          <img id="reviewerPhoto" src="" alt="Reviewer" class="rounded-circle" width="100" height="100" />
-          <h5 class="mt-2" id="reviewerName"></h5>
-          <small id="reviewerRole" ></small>
-          <div id="reviewerStars" class="my-2"></div>
-        </div>
-        <p id="reviewerMessage"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div class="rv-modal-foot rv-a" style="--d:480">
+        <button type="button" class="rv-modal-btn" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-</body>
-
+<!-- Visitor insights panel -->
+<div class="vp-backdrop" id="vpBackdrop"></div>
+<aside class="vp" id="visitorPanel" role="dialog" aria-modal="true" aria-label="Visitor insights" aria-hidden="true">
+  <header class="vp-head">
+    <div class="vp-eye"><i class="fas fa-eye"></i></div>
+    <div><h4>Visitor insights</h4><small>Who is viewing this portfolio</small></div>
+    <button type="button" class="vp-x" id="vpClose" aria-label="Close panel"><i class="fas fa-xmark"></i></button>
+  </header>
+  <div class="vp-body">
+    <div class="vp-hero">
+      <span class="vp-live"><i></i>LIVE</span>
+      <div class="vp-big" id="vpTotal">–</div>
+      <span class="vp-cap">Total profile views</span>
+      <span class="vp-no" id="vpNo" hidden></span>
+      <span class="vp-owner" id="vpOwner" hidden><i class="fas fa-user-shield"></i> Owner mode · your visits are not counted</span>
+    </div>
+    <div class="vp-grid">
+      <div><b id="vpToday">–</b><span>Views today</span></div>
+      <div><b id="vpMine">1</b><span>Your visits</span></div>
+    </div>
+    <h6>Your visit</h6>
+    <ul class="vp-list" id="vpYou"></ul>
+    <div id="vpRecentWrap" hidden>
+      <h6 id="vpRecentTitle">Recent visitors</h6>
+      <ul class="vp-list" id="vpRecent"></ul>
+    </div>
+    <p class="vp-note">Only details you share or your browser reveals (city, device, browser, name if you enter it) are used. IP addresses are never stored.</p>
+  </div>
+</aside>
 
 <!-- Dark Mode Toggle Button -->
 <button id="themeToggleBtn" class="btn btn-sm btn-dark position-fixed" onclick="toggleDarkMode()" style="z-index: 9;">
@@ -1616,25 +1572,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
-<!-- Disable Right-Click and DevTools -->
-<script>
-
-  document.addEventListener('contextmenu', event => event.preventDefault());
-
-  // Disable F12, Ctrl+Shift+I/J/C
-  document.onkeydown = function (e) {
-    if (
-      e.keyCode === 123 || // F12
-      (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) // Ctrl+Shift+I/J/C
-    ) {
-      return false;
-    }
-  };
-
-
- 
-
-</script>
 <script>
 window.onload = function () {
 
@@ -1689,6 +1626,8 @@ window.onload = function () {
     e.preventDefault(); // ⛔ prevent form redirect
 
     const form = e.target;
+    const btn = form.querySelector('.hire-btn');
+    btn.classList.add('is-sending'); btn.disabled = true;
 
     fetch(form.action, {
       method: "POST",
@@ -1700,6 +1639,7 @@ window.onload = function () {
       .then(response => {
         if (response.ok) {
           showHireMeConfirmation(); // 🎉 SweetAlert
+          btn.classList.add('is-sent'); setTimeout(() => btn.classList.remove('is-sent'), 2600);
           form.reset(); // Clear form fields
         } else {
           Swal.fire("Oops!", "Something went wrong. Please try again later.", "error");
@@ -1707,116 +1647,12 @@ window.onload = function () {
       })
       .catch(() => {
         Swal.fire("Error!", "Could not send your message. Try again later.", "error");
-      });
-  });
-</script>
-
-<!-- ✅ Your Review Loading Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const reviewsWrapper = document.getElementById("reviews-wrapper");
-    const apiURL = 'https://script.google.com/macros/s/AKfycbw_0hEBageFg3McajGZLs83V5OPilJbrdZOt7iV9zYYO7v8C6_SmoKrLHEhZ_-vBQ8KBA/exec';
-
-    fetch(apiURL)
-      .then(res => res.json())
-      .then(reviews => {
-        if (!Array.isArray(reviews) || reviews.length === 0) {
-          reviewsWrapper.innerHTML = `<div class="swiper-slide"><div class="testimonial-card p-4 text-center">No reviews yet.</div></div>`;
-        } else {
-          const seen = new Set();
-          reviews.forEach(r => {
-            const key = `${r.name}::${r.message}`;
-            if (seen.has(key)) return;
-            seen.add(key);
-
-            const stars = '★'.repeat(Math.max(0, Math.min(5, Number(r.rating) || 0))) + '☆'.repeat(5 - Math.max(0, Math.min(5, Number(r.rating) || 0)));
-
-            const slide = document.createElement("div");
-            slide.className = "swiper-slide";
-            slide.innerHTML = `
-              <div class="testimonial-card p-4 text-center Achievements">
-                <div style="display:flex;justify-content:center;">
-                  <img src="${r.photo || 'https://randomuser.me/api/portraits/lego/1.jpg'}" alt="${r.name}" class="rounded-circle mb-3" width="90" height="90">
-                </div>
-                <h5 class="fw-bold mb-1">${r.name}</h5>
-                <small class="d-block">${r.role || ''}</small>
-                <div class="star-rating text-warning mt-0" aria-label="Rating">${stars.split('').map(s => `<span>${s}</span>`).join('')}</div>
-                <p class="mb-2 review-text" style="max-height: 4.5em; overflow: hidden;">"${r.message}"</p>
-              <a href="#" 
-   class="view-more-btn btn btn-sm btn-outline-primary" 
-   data-bs-toggle="modal" 
-   data-bs-target="#reviewModal"
-   data-name="${r.name}"
-   data-role="${r.role || ''}"
-   data-photo="${r.photo || 'https://randomuser.me/api/portraits/lego/1.jpg'}"
-   data-message="${r.message.replace(/"/g, '&quot;')}"
-   data-rating="${r.rating || 0}">
-  View More
-</a>
-
-              </div>
-            `;
-            reviewsWrapper.appendChild(slide);
-          });
-        }
-
-        new Swiper(".mySwiper", {
-          loop: true,
-          autoplay:true,
-          spaceBetween: 30,
-          slidesPerView: 1,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-          }
-        });
-
-        // Optional: attach modal/show logic to .view-more-btn here if needed
       })
-      .catch(err => {
-        console.error("Failed loading reviews:", err);
-        reviewsWrapper.innerHTML = `<div class="swiper-slide"><div class="testimonial-card p-4 text-center">Could not load reviews.</div></div>`;
-      });
+      .finally(() => { btn.classList.remove('is-sending'); btn.disabled = false; });
   });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const reviewModalEl = document.getElementById("reviewModal");
-  reviewModalEl.addEventListener("show.bs.modal", function (event) {
-    const button = event.relatedTarget; // Button that triggered the modal
-
-    const name = button.getAttribute("data-name");
-    const role = button.getAttribute("data-role");
-    const photo = button.getAttribute("data-photo");
-    const message = button.getAttribute("data-message");
-    const rating = parseInt(button.getAttribute("data-rating"), 10) || 0;
-
-    // Fill modal content
-    document.getElementById("reviewerPhoto").src = photo;
-    document.getElementById("reviewerName").textContent = name;
-    document.getElementById("reviewerRole").textContent = role;
-
-    // Stars
-    const maxStars = 5;
-    let starsHtml = "";
-    for (let i = 0; i < rating; i++) starsHtml += "★";
-    for (let i = rating; i < maxStars; i++) starsHtml += "☆";
-    document.getElementById("reviewerStars").textContent = starsHtml;
-
-    document.getElementById("reviewerMessage").textContent = message;
-  });
-});
-
-
-
 </script>
+
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -1920,4 +1756,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!--  Add this to fix tab switching -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/animated.js"></script>
+<script src="assets/js/enhance.js"></script>
+</body>
+</html>
